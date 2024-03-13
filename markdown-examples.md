@@ -1,5 +1,7 @@
 # Markdown Extension Examples
 
+![主页测试](/主页测试.png)
+
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
 ## Syntax Highlighting

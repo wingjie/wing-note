@@ -1,35 +1,33 @@
 import { defineConfig } from 'vitepress'
+import { getSidebarData, getNavData } from './utils/createSideBar.ts'
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Wing's Note",
-  description: "A VitePress Site",
-  lastUpdated: true,
+  description: "前端",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
   themeConfig: {
     footer: {
-      // message: '未来可期',
-      // copyright: 'Copyright © 2019-present Evan You'
+      message: '未来可期',
+      copyright: 'Copyright © 2024-present Evan You'
     },
     // https://vitepress.dev/reference/default-theme-config
     // siteTitle: 'Hello World',
     logo: '/logo.png',
+    outline: {
+      label: '页面导航'
+    },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/api-examples' }
+      { text: '主页', link: '/' },
+      { text: '常用网页导航', link: 'https://lwj-wing.gitee.io/wings-nav/' },
+      ...getNavData()
     ],
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
+    sidebar: {
+      ...getSidebarData(),
+    },
     socialLinks: [
       { icon: 'github', link: 'https://gitee.com/lwj-wing/vite-note' }
     ],
@@ -40,5 +38,18 @@ export default defineConfig({
       // container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
       // debug: false
     },
+    editLink: {
+      pattern: 'https://gitee.com/lwj-wing/wing-note/edit/master/:path',
+      text: '在Gitee上编辑此页 '
+    },
+    lastUpdated: {
+      text: '最后编辑时间',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+    docFooter: { prev: '上一篇', next: '下一篇' },
+    
   }
 })

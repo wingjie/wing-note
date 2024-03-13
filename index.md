@@ -3,14 +3,14 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "My VitePress notes"
+  text: "Front-end learning document collection"
+  tagline: 前端、技术、学习
   image: /logo.png
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 开始
+      link: /src/前端/
     - theme: alt
       text: API Examples
       link: /api-examples
@@ -23,11 +23,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-## Getting Started
-
-You can get started using VitePress right away using `npx`!
-
-```sh
-npm init
-npx vitepress
-
