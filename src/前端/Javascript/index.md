@@ -1,14 +1,3 @@
----
-head:
-  - - meta
-    - name: description
-      content: hello
-  - - meta
-    - name: keywords
-      content: super duper SEO
----
-
-
 # 目录
 
 [一、javascript 初始](js-01%20javascript%20初始.md)
