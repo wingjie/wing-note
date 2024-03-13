@@ -9,7 +9,7 @@ export default defineConfig({
   title: "Wing's Note",
   description: "前端",
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: `${BASE_URL}/favicon.ico` }],
   ],
   themeConfig: {
     footer: {
@@ -52,6 +52,5 @@ export default defineConfig({
       }
     },
     docFooter: { prev: '上一篇', next: '下一篇' },
-    
   }
 })
